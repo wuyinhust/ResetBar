@@ -1,0 +1,33 @@
+# Publish only the source, synthetic tests, build scripts, and CI configuration.
+*
+!/.gitignore
+!/README.md
+!/build.sh
+!/test.sh
+!/Sources/
+!/Sources/*.swift
+!/Tests/
+!/Tests/*.swift
+!/.github/
+!/.github/workflows/
+!/.github/workflows/ci.yml
+
+# Keep generated artifacts and local/private data out even if nested later.
+.build/
+dist/
+evidence/
+state.json
+status-item*.png
+status-item-check.json
+*.env
+.env*
+*.log
+*.app/
+*.dmg
+*.zip
+*.o
+*.dylib
+*.swiftmodule
+*.swiftdoc
+.DS_Store
+._*

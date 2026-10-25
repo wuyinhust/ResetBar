@@ -1,0 +1,18 @@
+name: macOS build and tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run unit tests
+        run: zsh test.sh
+      - name: Build app
+        run: zsh build.sh
